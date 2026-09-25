@@ -6,15 +6,15 @@ Monorepo for the local Quickshell and Wayland shell configurations.
 
 - `yepbar/` — always-running Hyprland bar and overlays.
 - `wallpaperselect/` — on-demand wallpaper carousel, bound to `Super+Shift+W`.
-- `hyprquickpaper/` — legacy standalone wallpaper carousel.
 - `volume-osd/` — volume OSD shell.
+
+The local legacy `hyprquickpaper/` directory is intentionally ignored.
 
 ## Running configurations
 
 ```bash
 quickshell -p ~/.config/quickshell/yepbar/shell.qml
 quickshell -n -c wallpaperselect
-quickshell -n -c hyprquickpaper
 quickshell -n -c volume-osd
 ```
 

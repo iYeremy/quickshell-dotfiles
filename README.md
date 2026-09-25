@@ -1,9 +1,9 @@
 # Yepbar — Quickshell Dotfiles
 
 This is the Quickshell evolution of my old [Waybar](https://github.com/Alexays/Waybar)
-setup: a tiny always-on bar that
-quickly grew into a small desktop UI with overlays, an app drawer, notifications,
-a calendar and system controls.
+setup. It lowkey started as a tiny always-on bar and somehow ended up eating the
+whole desktop lol: overlays, an app drawer, notifications, a calendar and system
+controls.
 
 The main piece is `yepbar`. The wallpaper selector and volume OSD are separate
 Quickshell configurations, because there is zero reason to keep heavyweight stuff
@@ -23,9 +23,9 @@ I actually use.
 
 ## Why did I move from Waybar to Quickshell?
 
-Look, Waybar is still excellent. It is fast, predictable and does one thing very
-well: being a bar. My old config is still around at `~/.config/waybar` because
-Waybar remains a completely valid choice if that is all you need.
+No hate, but Waybar still goes hard. It is fast, predictable and does one thing
+very well: being a bar. My old config is still around at `~/.config/waybar`
+because Waybar remains completely valid if that is all you need.
 
 The switch happened because this project stopped being “just a bar”:
 
@@ -42,10 +42,10 @@ talk to each other. Quickshell also gives us direct access to Hyprland, PipeWire
 MPRIS, processes, files and IPC without making the project explode into a pile of
 fragile polling scripts.
 
-BTW, Quickshell is not magically lighter than Waybar. The reason for moving was
-**fit**, not some fake “Waybar bad” manifesto. If you only want modules, use
-Waybar. If the bar is becoming a tiny desktop shell, Quickshell is ngl a much
-better fit.
+BTW, Quickshell is not magically lighter than Waybar. Let's be real: the move was
+about **fit**, not some fake “Waybar bad” manifesto. If you only want modules,
+use Waybar. If the bar is becoming a tiny desktop shell, Quickshell is ngl the
+better fit. Simple.
 
 ## What is in the box?
 
@@ -65,8 +65,8 @@ better fit.
 A dock-style wallpaper carousel with thumbnails, mouse/keyboard navigation and
 automatic thumbnail generation.
 
-It is **not** loaded by `yepbar`. The bar stays alive, and the selector is created
-only when the shortcut asks for it. That is the whole point.
+It is **not** loaded by `yepbar`. Fr, the bar stays alive and the selector is
+created only when the shortcut asks for it. That is the whole point.
 
 ### Persistent `volume-osd`
 
@@ -137,11 +137,11 @@ Most live data comes from event-driven sources:
 
 The wallpaper carousel is intentionally outside this graph. It has its own
 process, its own lifecycle and its own cache. No lazy `Loader` nonsense inside
-the always-on bar.
+the always-on bar, gng.
 
 ## Requirements
 
-The core desktop needs:
+The core desktop needs the usual suspects:
 
 | Dependency | Why it is needed |
 | --- | --- |
@@ -173,7 +173,8 @@ The font currently used by `yepbar` is `JetBrainsMono Nerd Font`, with
 
 ## Installation
 
-Back up the current config first if you already have one. Obviously.
+Back up the current config first if you already have one. We have all been
+burned by that one, trust.
 
 Clone this repository directly into the Quickshell config directory:
 
@@ -382,7 +383,7 @@ Check:
 - The source images are PNG, JPG or JPEG files.
 
 The selector retries failed thumbnails while `cache.sh` is generating them, so
-give it a second instead of spamming the shortcut.
+give it a second instead of spamming the shortcut like it owes you money.
 
 ### The wallpaper shortcut does nothing
 
@@ -398,20 +399,27 @@ Then test the command directly:
 quickshell -n -c wallpaperselect
 ```
 
-If that works, the problem is the keybind. If it does not, the problem is
-Quickshell or the config itself.
+If that works, the keybind is being main character. If it does not, the problem
+is Quickshell or the config itself.
 
 ## Design rules
 
-A few rules keep this project from turning into an unreadable QML blob:
+A few rules keep this project from turning into an unreadable QML blob. No cap,
+this is where scope creep goes to cry:
 
 - Keep `yepbar` alive and lightweight.
 - Load heavy, temporary interfaces in their own process.
 - Prefer event-driven updates over “run it every 200 ms and hope”.
 - Keep shared visual constants in `Config.qml`.
 - Use Rust/Python only when they make the helper simpler.
-- Do not integrate the wallpaper carousel into the bar again. Seriously lol.
+- Do not integrate the wallpaper carousel into the bar again. Gng, I mean it.
 
 The whole point of moving to Quickshell was to make a more capable UI without
 pretending every problem is a module problem. Waybar remains the simple path;
-this repo is the “I want a tiny desktop shell” path.
+this repo is the “I want a tiny desktop shell” path. Say less.
+
+## License
+
+This project is available under the [MIT License](LICENSE). Use it, remix it,
+send it to your friend who still uses Waybar — just keep the copyright notice
+intact.

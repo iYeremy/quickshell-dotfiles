@@ -1,0 +1,11 @@
+singleton Config 1.0 Config.qml
+Bar 1.0 Bar.qml
+WorkspaceWidget 1.0 WorkspaceWidget.qml
+ClockWidget 1.0 ClockWidget.qml
+StatusWidget 1.0 StatusWidget.qml
+AppDrawer 1.0 AppDrawer.qml
+CalendarPopup 1.0 CalendarPopup.qml
+BrightnessPopup 1.0 BrightnessPopup.qml
+AppLauncher 1.0 AppLauncher.qml
+AppScanner 1.0 AppScanner.qml
+NotificationCenter 1.0 NotificationCenter.qml

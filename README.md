@@ -19,3 +19,13 @@ quickshell -n -c volume-osd
 ```
 
 Generated build artifacts, local Quickshell tooling files, logs, Python caches, and local environment files are excluded by `.gitignore`.
+
+## Building the yepbar hardware monitor
+
+The hardware monitor is compiled from `yepbar/scripts/qs_monitor/` and installed where `WorkspaceWidget.qml` expects it:
+
+```bash
+./yepbar/scripts/build_qs_monitor.sh
+```
+
+This requires a Rust toolchain and uses the committed `Cargo.lock` file.

@@ -11,6 +11,7 @@ log*.txt
 target/
 __pycache__/
 *.py[cod]
+/yepbar/scripts/qs_monitor_bin
 
 # Local environment and secrets
 .env

@@ -1,0 +1,20 @@
+# Quickshell local tooling and runtime files
+.qmlls.ini
+*.qslog
+*.log
+
+# Generated language/build artifacts
+target/
+__pycache__/
+*.py[cod]
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+*.swp
+*~

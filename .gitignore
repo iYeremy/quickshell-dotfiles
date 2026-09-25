@@ -2,6 +2,7 @@
 .qmlls.ini
 *.qslog
 *.log
+log*.txt
 
 # Generated language/build artifacts
 target/
